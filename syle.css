@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-forl{
+    height: 100%;
+    width:90%;
+    margin-left:250px !important;
+    margin-top:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     perspective: 1000px;
+}
+
+
+button,h2{
+    margin: 10px;
+    padding: 10px;
+}
+
+label{
+    margin:8px;
+    padding:10px;
+}
+input{
+    margin:5px;
+    padding:10px;
+}
+
+button{
+    border: 2px solid yellow;
+    box-shadow: 0 0 10px red;
+    border-radius: 20px  !important;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    transition: .5s;
+
+}
+
+.buttonChange{
+    transform: translateZ(100px);
+    transition: .5s;
+    border-radius:50px ;
+}
+
+label{
+    color: white;
+    font-size: 20px;
+}
+input,select{
+    
+    border-radius: 20px;
+    border: 2px double red;
+    box-shadow: 0 0 10px blue;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    color: chartreuse;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    transition: .5s;
+}
+.inner-container{
+    background-color: black; 
+    margin: 20px;
+    padding: 20px;
+    width: 60%;
+    border-radius: 30px;
+     box-shadow: 0 0 20px green;
+    position: relative;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    cursor: pointer;    
+    transition: .1s;
+}
+
+form{
+    width: 50%;
+    min-height: 50vh;
+   z-index: 3;
+
+}
+img{
+    float: right;
+   position: absolute;
+   top: 0%;
+   right: 0%;
+}
+
+#goks{
+    margin-top: 20%;
+    z-index: 3;    
+}
+#book{
+    margin-top: 20px;
+    border-radius: 40%;
+    margin-right: 50px;
+    z-index: 4;
+    transition: 1s;
+    
+}
+
+.path{
+    top: 0;
+    right: -10px;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(rgb(163, 109, 224),rgb(206, 76, 76));
+    clip-path:circle(350px at right);
+    border-radius: 20px;
+    z-index: 1;
+    position: absolute;    
+}
+.head{
+    color: rgb(51, 62, 209);
+    transition: 3.5s;
+    transform: rotateX(60deg);
+}
+.heads{
+    color: red;
+    transition: 2s;
+    transform:  perspective(120px) rotateZ(90deg);
+    transform: rotateX(90deg);
+    transform: rotateY(90deg);
+    font-variant: small-caps;
+}

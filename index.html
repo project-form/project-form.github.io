@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation_form</title>
+    <link rel="stylesheet" href="./syle.css">
+
+      <script src="https://kit.fontawesome.com/30268dea2e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+</head>
+<body style="background-image: url(https://www.fgdc.gov/img/slider/slider-bg-network.jpg/image);" >
+
+<!-- creating apologies in for sm -->
+    <div class="container d-sm-block d-lg-none">
+   
+        <div class="mt-5 card bg-info m-2 p-2" style="box-shadow: 0 0 15px red;">
+            <div class="card-title text-center text-danger bg-info" style="text-shadow: 0 1px  2px black;">
+              <p class="h1 " ><i class="fas fa-sad-tear me-2 "style="color:yellow;" ></i>HI  &nbsp USER</p>  
+            </div>
+            <hr class="p-0 m-0">
+            <div class="card-body text-white m-1 p-1 lead">
+                <p>Sorry to inform that the form will not be able to open in mobile phones or in any other smaller screens because i've done an animation in the form for better user interface.This form is not responsive in mobile phones so please go and check in  system and register in it</p>
+            </div>
+            <hr class="p-0 m-0">
+            <div class="card-footer m-1 p-1 text-center bg-warning " style="border-radius: 10px; box-shadow: 2px  5px 10px red;">
+                <p class="h6 text-danger "><i class="fas fa-laptop me-2"></i>please check on the system</p>
+            </div>
+        </div>
+    
+    </div>
+    <!-- creating the form -->
+    
+    <div class="container-forl d-none d-lg-block " >
+        <div class="inner-container " id="in-con">
+            <div class="path"></div>
+        <form action="register.php" method="POST">
+            <h2 class="head h1" ><i class="fas fa-users me-2"></i> Registration</h2>
+          
+            <label for="name">Name: &nbsp  &nbsp &nbsp </label>
+            <input type="text" name="uname" id="name" placeholder="Enter your good name" required><br>
+
+            <label for="uRegNo">Reg.No:&nbsp  &nbsp  </label>
+            <input type="text" name="uregno" id="secret" placeholder="AC20U?????" required><br>
+
+            <label for="uMail">Gmail:&nbsp  &nbsp &nbsp </label>
+            <input type="email" name="umail" id="secret" placeholder="Enter the Mail-Id" required>
+            <label for="uDept">Department:&nbsp  &nbsp  </label>
+            <!-- <input type="se" name="uBranch" id="secret" placeholder="" required><br> -->
+            <select class="form-select w-50"  name="udept" id="dept">
+                <option  selected style="visibility: hidden;" >Your department</option>
+                <option value="1" style="margin: 10px;">CSE</option>
+                <option value="2">ECE</option>
+                <option value="3">EEE</option>
+                <option value="4">BM</option>
+                <option value="5">ME</option>
+                <option value="6">IT</option>
+                <option value="7">CE</option>
+
+            </select>
+        
+
+           <div style="margin-top:20px ; margin-left:20px;" >
+            <button type="submit " class="btn-outline-primary " value="register" id="btn"><i class="fas fa-hand-point-up me-1"></i>Register</button>
+           </div>
+        </form>
+        <img src="./book.jpeg"  id="book"  alt="book" width="100" height="80">
+       
+    </div>
+    </div>
+    <!--  -->
+
+   <script>
+
+    
+
+    let box=document.querySelector("#in-con");
+    box.addEventListener("mousemove",(e)=>{
+        
+        
+         let horizontal=(window.innerWidth/2-e.pageX)/15;
+         let vertical=(window.innerHeight/2-e.pageY)/15;
+         box.style.transform=`rotateX(${horizontal}deg) rotateY(${vertical}deg)`
+    
+         let btn=document.querySelector("#btn");
+        let book=document.querySelector("#book");
+         
+         let head=document.querySelector(".head");
+       let name=document.getElementById("name");
+         let secret=document.querySelector("#secret");
+        
+         head.style.marginLeft="200px";
+        
+        
+    })
+
+
+
+    box.addEventListener("mouseleave",(e)=>{
+         let horizontal=(window.innerWidth/2-e.pageX)/15;
+         let vertical=(window.innerHeight/2-e.pageY)/15;
+         box.style.transform=`rotateX(${0}deg) rotateY(${0}deg)`
+     
+         let btn=document.querySelector("#btn");
+         let book=document.querySelector("#book");
+         let head=document.querySelector(".head");
+         let name=document.getElementById("name");
+        let secret=document.querySelector("#secret");
+
+    
+        })
+
+        setInterval(()=>{
+            head=document.querySelector(".head");
+            head.classList.toggle("heads");
+        },2000)
+
+   </script>
+   <script src="./index.js"></script>
+
+</body>
+</html>
